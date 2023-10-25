@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Commands\" />
-    <Folder Include="Services\" />
-    <Folder Include="Queries\" />
+    <ProjectReference Include="..\Quala.domain\Quala.domain.csproj" />
   </ItemGroup>
 
 </Project>

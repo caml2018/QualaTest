@@ -1,0 +1,17 @@
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.infrastructure.deps.json
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.infrastructure.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.infrastructure.pdb
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.csproj.AssemblyReference.cache
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.AssemblyInfoInputs.cache
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.AssemblyInfo.cs
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\refint\Quala.infrastructure.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.pdb
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\ref\Quala.infrastructure.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.application.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.domain.dll
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.application.pdb
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\bin\Debug\net5.0\Quala.domain.pdb
+C:\Users\camej\source\repos\QUALA\BACK\Quala.api\Quala.infrastructure\obj\Debug\net5.0\Quala.infrastructure.csproj.CopyComplete

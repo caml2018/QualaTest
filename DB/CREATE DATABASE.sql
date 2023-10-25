@@ -49,6 +49,8 @@ CREATE TABLE [sucursales].[sucursal](
 	FOREIGN KEY (monedaId)
 	REFERENCES [sucursales].[moneda](id)
 )
+ALTER TABLE [sucursales].[sucursal] ADD estado int
+GO
 DROP TABLE [sucursales].[moneda]
 CREATE TABLE [sucursales].[moneda](
 	id int IDENTITY(1,1) NOT NULL,
@@ -57,5 +59,9 @@ CREATE TABLE [sucursales].[moneda](
 	estado int,
 	PRIMARY KEY (id)
 )
+
+INSERT INTO [sucursales].[moneda]([codigo],[nombre],[estado])VALUES('COP','PESO COLOMBIANO',1)
+INSERT INTO [sucursales].[moneda]([codigo],[nombre],[estado])VALUES('USD','DOLAR EEUU',1)
+GO
 
 

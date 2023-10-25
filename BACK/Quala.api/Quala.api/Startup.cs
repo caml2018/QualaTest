@@ -1,12 +1,18 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Quala.application.Services;
+using Quala.domain.Services;
+using Quala.infrastructure.Context;
+using Quala.infrastructure.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +38,18 @@ namespace Quala.api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Quala.api", Version = "v1" });
             });
+            services.AddDbContext<DbQualaTestContext>(options =>
+           options.UseSqlServer(Configuration.GetConnectionString("Storage")));
+            services.AddServiceCollectionApplication();
+            services.AddServiceCollectionDomain();
+            services.AddServiceCollectionInfrastructure();
+
+            //Mapper
+            var mapperConfig = new MapperConfiguration(x => {
+                x.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +65,12 @@ namespace Quala.api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(options =>
+            options.WithOrigins(
+                "http://localhost:4200/",
+                "http://{public IP}:{public port}/",
+                "http://{public DNS name}:{public port}/").AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthorization();
 

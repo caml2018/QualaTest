@@ -5,6 +5,18 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quala.api", "Quala.api\Quala.api.csproj", "{D4B0B69D-7C97-46CA-B6B8-C66D03DBD57C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4D92CD35-3232-4F19-91B4-7F4CEE7251A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1E6BA615-7AFF-48A6-ACE7-F8864260CDCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8AD98979-9EF9-4E9F-8109-CE04EB3752DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quala.domain", "Quala.domain\Quala.domain.csproj", "{C19EB78F-FB08-461A-9053-3DF6C328E6F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quala.application", "Quala.application\Quala.application.csproj", "{95CBC498-2787-4743-A9F6-44373C68FD44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quala.infrastructure", "Quala.infrastructure\Quala.infrastructure.csproj", "{1D65B13C-AC13-4D66-B93E-618E27D3AEDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +27,27 @@ Global
 		{D4B0B69D-7C97-46CA-B6B8-C66D03DBD57C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4B0B69D-7C97-46CA-B6B8-C66D03DBD57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4B0B69D-7C97-46CA-B6B8-C66D03DBD57C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19EB78F-FB08-461A-9053-3DF6C328E6F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19EB78F-FB08-461A-9053-3DF6C328E6F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19EB78F-FB08-461A-9053-3DF6C328E6F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19EB78F-FB08-461A-9053-3DF6C328E6F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CBC498-2787-4743-A9F6-44373C68FD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CBC498-2787-4743-A9F6-44373C68FD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CBC498-2787-4743-A9F6-44373C68FD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CBC498-2787-4743-A9F6-44373C68FD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D65B13C-AC13-4D66-B93E-618E27D3AEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D65B13C-AC13-4D66-B93E-618E27D3AEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D65B13C-AC13-4D66-B93E-618E27D3AEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D65B13C-AC13-4D66-B93E-618E27D3AEDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4B0B69D-7C97-46CA-B6B8-C66D03DBD57C} = {4D92CD35-3232-4F19-91B4-7F4CEE7251A4}
+		{C19EB78F-FB08-461A-9053-3DF6C328E6F0} = {1E6BA615-7AFF-48A6-ACE7-F8864260CDCA}
+		{95CBC498-2787-4743-A9F6-44373C68FD44} = {1E6BA615-7AFF-48A6-ACE7-F8864260CDCA}
+		{1D65B13C-AC13-4D66-B93E-618E27D3AEDE} = {8AD98979-9EF9-4E9F-8109-CE04EB3752DA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF1AECE3-49E3-48D6-9B16-1173AA9E594E}
