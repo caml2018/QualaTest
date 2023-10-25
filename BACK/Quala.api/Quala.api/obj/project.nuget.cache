@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "OcBkEidNAAd1p+pSsp0IOyynveDebsd2L3nlWXoQXMz7Y/vx/VPo8EdVhZ+U51Vv9eBH89e/GA4tqm3IfirHGA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\camej\\source\\repos\\QUALA\\BACK\\Quala.api\\Quala.api\\Quala.api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\camej\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\camej\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\camej\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\camej\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\camej\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\camej\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
