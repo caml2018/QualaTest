@@ -46,7 +46,6 @@ export class TableComponent {
   }
 
   ngOnChanges(){
-    debugger;
     this.dataSource = new MatTableDataSource(this.tableData);
     this.displayedColumnsadd=[];
     this.displayedColumnsadd= this.displayedColumnsadd.concat(this.columns,this.displayedColumns);

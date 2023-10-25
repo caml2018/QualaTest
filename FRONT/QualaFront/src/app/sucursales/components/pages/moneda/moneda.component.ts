@@ -27,7 +27,6 @@ export class MonedaComponent implements OnInit {
   ngOnInit(): void {
     this._monedaService.getAll().subscribe(res=>{
       if(res.exito==1){
-        debugger;
         this.tableData=res.data
       }
     })

@@ -3,6 +3,76 @@
     <button mat-stroked-button (click)="onCreateRegister()">{{CreateLabel}}</button>
   </div>
   <hr width="97%">
-  <!-- <div class="bill-containter">
+  <app-modal #modal (title)="ModalTitle"  [tableData]="tableData" [displayedColumns]="displayedColumns" (updateRegisterEvent)="onUpdateRegisterEvent($event)" (deleteRegisterEvent)="onDeleteRegisterEvent($event)">
+    <form class="form-customer" [formGroup]="sucursalform" #formDirective="ngForm"  (submit)="$event.preventDefault()">
+        <div class="row-form">
+            <mat-form-field class="meddium-width">
+                <mat-label>Código</mat-label>
+                <input type="number" [formControl]="sucursalform.controls.codigo" matInput placeholder="Nombres" >
+                <mat-error *ngIf="sucursalform.controls.codigo.hasError('required')">
+                  El Código es <strong>Requerido</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="meddium-width">
+                <mat-label>Descripción</mat-label>
+                <input type="text" [formControl]="sucursalform.controls.descripcion" matInput placeholder="Nombres" >
+                <mat-error *ngIf="sucursalform.controls.descripcion.hasError('required')">
+                  La Descripción es <strong>Requerida</strong>
+                </mat-error>
+              </mat-form-field>
+        </div>
+        
+        <div class="row-form">
+            <mat-form-field class="meddium-width">
+                <mat-label>Dirección</mat-label>
+                <input type="text" [formControl]="sucursalform.controls.direccion" matInput placeholder="Nombres" >
+                <mat-error *ngIf="sucursalform.controls.direccion.hasError('required')">
+                  La dirección es <strong>Requerida</strong>
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="meddium-width">
+                <mat-label>Identificación</mat-label>
+                <input type="text" [formControl]="sucursalform.controls.identificacion" matInput placeholder="Nombres" >
+                <mat-error *ngIf="sucursalform.controls.direccion.hasError('required')">
+                  El Identificación es <strong>Requerida</strong>
+                </mat-error>
+              </mat-form-field>
+
+        </div>
+        <div class="row-form">
+            <mat-form-field class="meddium-width">
+                <mat-label>Fecha de Creación</mat-label>
+                <input matInput [matDatepicker]="picker" [formControl]="sucursalform.controls.fechaCreacion" (ngModelChange)="updateCalcs()">
+                <mat-hint>DD/MM/AAAA</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input placeholder="Seleccione la moneda" type="text" aria-label="Number" matInput [formControl]="sucursalform.controls.selectMoneda" [matAutocomplete]="auto" >
+                <mat-autocomplete #auto="matAutocomplete"  (optionSelected)='onOptionsMonedaSelected($event.option.value)' >
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option.codigo}}({{option.nombre}})
+                </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+            <button type="button" class="close" aria-label="Close" (click)="cleanMoneda()">
+                <span aria-hidden="true">x</span>
+            </button>
+        </div>
+        <div class="row-form">
+            <div class="center">
+              <div>
+                <button mat-raised-button>Cancelar</button>
+                <button mat-raised-button [disabled]="!sucursalform.valid" (click)="onSave()">Guardar</button>
+              </div>
+            </div>
+          </div>
+    </form>
+
+  </app-modal>
+  <div class="bill-containter">
       <app-table [title]="tblTitle" [tableData]="tableData" [columns]="columns" [displayedColumns]="displayedColumns"  (updateEvent)="onUpdateRegister($event)" (deleteEvent)="onDeleteRegister($event)"></app-table>
-  </div> -->
+  </div>

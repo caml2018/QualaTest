@@ -1,8 +1,9 @@
 export interface SucursalModel {
     id:number,
-	codigo:string,
-	descripcion:string,
-	direccion:string,
-	identificacion:string,
+	codigo:number,
+	descripcion:string|null,
+	direccion:string|null,
+	identificacion:string|null,
+	Fechacreacion:Date|null,
 	monedaId:number
 }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SucursalModel } from 'src/app/models/sucursal.model';
+import { Response } from 'src/app/models/response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +22,10 @@ export class SucursalService {
    }
 
    getAll():Observable<Response>{
-      return this.http.get<Response>(`${this.urlGet}`);
+      return this.http.get<Response>(`${this.urlGet}/getAll`);
    }
 
-   SaveOrUpdateAutor(): Observable<Response> {
+   SaveOrUpdateSucursal(): Observable<Response> {
     var body = {
       ...this.formData,
     }

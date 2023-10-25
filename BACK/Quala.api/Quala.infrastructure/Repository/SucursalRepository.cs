@@ -24,6 +24,7 @@ namespace Quala.infrastructure.Repository
         {
             try
             {
+                entity.Estado = 1;
                 _db.Add(entity);
                 _db.SaveChanges();
                 return entity;

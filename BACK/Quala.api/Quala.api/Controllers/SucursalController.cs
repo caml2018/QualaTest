@@ -5,6 +5,7 @@ using Quala.application.Commands.SucursalC;
 using Quala.application.Queries.MonedaQ;
 using Quala.application.Queries.SucursalQ;
 using Quala.domain.Entities.Dtos;
+using Quala.domain.Entities.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -50,6 +51,44 @@ namespace Quala.api.Controllers
                 var res = ex.Message;
 
                 return BadRequest();
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> add(SucursalDto sucursalDto)
+        {
+            try
+            {
+                return Ok(new { exito = 1, mensaje = "success", data = this._sucursalWrite.Add(_mapper.Map<Sucursal>(sucursalDto)) });
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(new { exito = 0, mensaje = "Error", data = ex.Message });
+            }
+        }
+        [HttpDelete]
+        public async Task<IActionResult> delete(int id)
+        {
+            try
+            {
+                this._sucursalWrite.delete(id);
+                return Ok(new { exito = 0, mensaje = "success", data =""});
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(new { exito = 0, mensaje = "Error", data = ex.Message });
+            }
+        }
+        [HttpPut]
+        public async Task<IActionResult> update(SucursalDto sucursalDto)
+        {
+            try
+            {
+                return Ok(this._sucursalWrite.update(_mapper.Map<Sucursal>(sucursalDto), sucursalDto.Id));
+            }
+            catch (System.Exception ex)
+            {
+                return BadRequest(new { exito = 0, mensaje = "Error", data = ex.Message });
             }
         }
     }
